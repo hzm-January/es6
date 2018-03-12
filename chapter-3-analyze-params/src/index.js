@@ -15,3 +15,11 @@ console.log(k+','+m);
 //字符串解构
 let [n,o,p]='nih';
 console.log(n+','+o+','+p);
+//注：如果在解构前已经定义了变量，对象解构会失败，数组解构正常
+let foo;
+[foo] = [1]; 
+console.log(foo);   //正常
+let fooobj;
+// {fooobj} = {fooobj:'a'}; //会报错
+({fooobj} = {fooobj:'a'}); //正常
+console.log(fooobj);

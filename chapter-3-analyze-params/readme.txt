@@ -23,3 +23,11 @@ console.log(a+','+b); //1,null null相当于有值并且值为null，所以b会�
 4.字符串的解构赋值
 let [n,o,p]='nih';
 console.log(n+','+o+','+p); // n,i,h
+5.注：如果在解构前已经定义了变量，对象解构会失败，数组解构正常
+let foo;
+[foo] = [1]; 
+console.log(foo);   //正常
+let fooobj;
+// {fooobj} = {fooobj:'a'}; //会报错
+({fooobj} = {fooobj:'a'}); //正常
+console.log(fooobj);

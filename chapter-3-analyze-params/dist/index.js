@@ -42,3 +42,14 @@ var _nih = 'nih',
     p = _nih2[2];
 
 console.log(n + ',' + o + ',' + p);
+//注：如果在解构前，已经定义了变量，解构会失败
+var foo = void 0;
+foo = 1;
+
+console.log(foo);
+var fooobj = void 0;
+// {fooobj} = {fooobj:'a'}; 会报错
+var _fooobj = { fooobj: 'a' };
+fooobj = _fooobj.fooobj;
+
+console.log(fooobj);
