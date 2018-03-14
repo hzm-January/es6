@@ -11,8 +11,8 @@ window.onload= function(){
 }
 //2.合并数组
 let c = [5,6];
-let d = [7,8,...[c]];
-console.log("let d = [7,8,...[c]] ："+d);
+let d = [7,8,...c];
+console.log("let d = [7,8,...c] ："+d);
 //3. 与解构合用
 let[e,f,...g]=[1,2,3,4,5,6,7,8];
 console.log('与解构合用let[e,f,...g]=[1,2,3,4,5,6,7,8]：'+g);
